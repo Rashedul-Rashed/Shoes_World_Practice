@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+  background-image: url(images/shoes.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+nav {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  grid-column: 1/-1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img {
+  width: 60px;
+  height: 30px;
+  margin-left: 20px;
+}
+.nav-items {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  text-align: right;
+  padding: 0;
+}
+.nav-items a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  transition: all 0.8s ease;
+}
+.nav-items a:hover {
+  color: crimson;
+  background-color: rgba(41, 67, 100, 0.8);
+}
+.nav-items a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: crimson;
+  transform-origin: bottom right;
+  transition: transform 0.8s ease;
+}
+.nav-items a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.header-title {
+  grid-column: 1 /8;
+  grid-row: 2/12;
+  margin-left: 50px;
+}
+.header-title h1 {
+  color: crimson;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+.header-title p {
+  color: white;
+  font-size: 30px;
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+.header-title a {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: antiquewhite;
+  background-image: linear-gradient(to right, crimson, rgb(91, 5, 5));
+}
+.container {
+  text-align: center;
+  color: peru;
+}
+.container h1 {
+  font-size: 40px;
+}
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  height: fit-content;
+}
+.box-items img {
+  border-radius: 5px;
+  transition: 1s ease;
+}
+.box-items h2 {
+  color: crimson;
+  font-size: 30px;
+}
+.box-items img:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 20px 20px 20px;
+}
+.about-section div {
+  width: 45%;
+  text-align: center;
+  background-image: linear-gradient(
+    rgba(194, 70, 8, 0.315),
+    rgba(75, 20, 20, 0.783)
+  );
+}
+.banner img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.banner {
+  border-radius: 10px;
+  padding: 20px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 344px;
+  border-radius: 10px;
+  margin-left: 50px;
+}
+.details h2 {
+  color: skyblue;
+  font-size: 2rem;
+}
+
+.details p {
+  color: lightcoral;
+  font-size: 1.3rem;
+  width: 60%;
+}
+/* Login and Registraion */
+.account {
+  margin-top: 100px;
+}
+.account > h2 {
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+.join-us {
+  display: flex;
+  justify-content: space-evenly;
+}
+.login {
+  width: 30%;
+  padding: 16px;
+  color: #f1f2f1;
+  text-align: center;
+  font-size: 20px;
+  border: 3px solid burlywood;
+  border-radius: 10px;
+}
+.img-container {
+  text-align: center;
+}
+.img-container img {
+  width: 20%;
+  border-radius: 50%;
+}
+.registration {
+  width: 30%;
+  padding: 16px;
+  color: #f1f2f1;
+  text-align: center;
+  font-size: 20px;
+  border: 3px solid burlywood;
+  border-radius: 10px;
+}
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: darksalmon;
+  box-sizing: border-box;
+}
+button {
+  background-color: crimson;
+  width: 100%;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  font-size: 15px;
+  color: #f1f1f1;
+  font-weight: 400;
+}
+.login h2,
+.registration h2 {
+  background-color: rgb(84, 2, 19);
+  padding: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-radius: 20px;
+}
+footer {
+  margin-top: 20px;
+  background-color: black;
+  color: #f1f1f1;
+}
+footer div {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  padding: 20px;
+}
+footer div .fa-brands {
+  margin-right: 20px;
+}
